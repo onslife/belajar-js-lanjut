@@ -3,7 +3,7 @@ const cari = document.querySelector("#cari");
 // Fitur Perncarian
 cari.addEventListener('click', function () {
 	const inputcari = document.querySelector("#carifilm").value;
-	fetch(`http://www.omdbapi.com/?s=${inputcari}&apikey=d753517c`)
+	fetch(`https://www.omdbapi.com/?s=${inputcari}&apikey=d753517c`)
 		.then(response => response.json())
 		.then(response => {
 			const movies = response.Search;
@@ -18,7 +18,7 @@ cari.addEventListener('click', function () {
 			tombolDetail.forEach(btn => {
 				btn.addEventListener('click', function () {
 					const id = this.getAttribute('data-imdid');
-					fetch(`http://www.omdbapi.com/?i=${id}&apikey=d753517c`)
+					fetch(`https://www.omdbapi.com/?i=${id}&apikey=d753517c`)
 						.then(response => response.json())
 						.then(response => {
 							const judul = document.querySelector('.modal-title');
