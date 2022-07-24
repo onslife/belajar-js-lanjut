@@ -86,7 +86,7 @@ $("#cari").on("click", function () {
 				$(".daftar-film").html(el);
 				$(".tampil-detail").on("click", function () {
 					$.ajax({
-						url: `http://www.omdbapi.com/?i=${$(this).data('imdid')}&apikey=d753517c`,
+						url: `https://www.omdbapi.com/?i=${$(this).data('imdid')}&apikey=d753517c`,
 						success: result => {
 
 							const {
