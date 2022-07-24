@@ -1,5 +1,5 @@
 $.ajax({
-	url: "http://www.omdbapi.com/?s=warkop&apikey=d753517c",
+	url: "https://www.omdbapi.com/?s=warkop&apikey=d753517c",
 	success: (result) => {
 		const movies = result.Search;
 		const el = movies
@@ -23,7 +23,7 @@ $.ajax({
 		$(".daftar-film").html(el);
 		$(".tampil-detail").on("click", function () {
 			$.ajax({
-				url: `http://www.omdbapi.com/?i=${$(this).data('imdid')}&apikey=d753517c`,
+				url: `https://www.omdbapi.com/?i=${$(this).data('imdid')}&apikey=d753517c`,
 				success: result => {
 
 					const {
@@ -62,7 +62,7 @@ $.ajax({
 $("#cari").on("click", function () {
 	const cari = $("#carifilm").val();
 	$.ajax({
-		url: `http://www.omdbapi.com/?s=${cari}&apikey=d753517c`,
+		url: `https://www.omdbapi.com/?s=${cari}&apikey=d753517c`,
 		success: (result) => {
 			const movies = result.Search;
 			if (movies) {
